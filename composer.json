@@ -1,5 +1,5 @@
 {
-    "name": "sproutvideo/sproutvideo",
+    "name": "cbwilkes/sproutvideo",
     "version": "1.0.1",
     "type": "library",
     "description": "A PHP client for SproutVideo (http://sproutvideo.com)",
