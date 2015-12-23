@@ -40,7 +40,7 @@ class CurlClient
       CURLOPT_CUSTOMREQUEST => $method
     ));
 
-    if(!is_null(body)) {
+    if(!is_null($body)) {
       curl_setopt($this->ch, CURLOPT_POSTFIELDS, $body);
     }
 
@@ -64,7 +64,7 @@ class CurlClient
 
   public function get($uri, $options = null)
   {
-    return $this->request('GET', $uri, $body, $options);
+    return $this->request('GET', $uri, null, $options);
   }
 
   public function post($uri, $body, $options = null)
@@ -79,7 +79,7 @@ class CurlClient
 
   public function delete($uri, $options = null)
   {
-    return $this->request('DELETE', $uri, $body, $options);
+    return $this->request('DELETE', $uri, null, $options);
   }
 
   public function upload($uri, $body, $options, $method = 'POST')
